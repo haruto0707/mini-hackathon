@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoWith</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <style>
+        .hero {
+            background-image: url('top.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-body a {
+            font-size: 2rem;
+            margin: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .modal-body a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">GoWith</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./about.html">サービスについて</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./features.html">機能</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./support.html">サポート</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ログイン</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="hero text-center py-5">
+        <div class="container">
+            <h1 class="display-4">助け合いをもっとシンプルに、リアルタイムで</h1>
+            <p class="lead">必要なときに、助けたい人とつながる</p>
+            <!-- 今すぐ始めるボタン (モーダルトリガー) -->
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#downloadModal">今すぐ始める</a>
+        </div>
+    </section>
+
+    <!-- モーダルウィンドウ -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadModalLabel">アプリをダウンロード</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>スマホで簡単に助け合い！アプリを今すぐダウンロードしてください。</p>
+                    <a href="https://apps.apple.com/jp" target="_blank" title="App Store">
+                        <i class="bi bi-apple"></i> App Store
+                    </a>
+                    <br>
+                    <a href="https://play.google.com/store" target="_blank" title="Google Play">
+                        <i class="bi bi-android"></i> Google Play
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- サービスの特徴セクション -->
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3" data-aos="fade-up">
+                    <i class="bi bi-wifi fs-1"></i>
+                    <h3>リアルタイムマッチング</h3>
+                    <p>困っている人と助けたい人を瞬時にマッチング。</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <i class="bi bi-clock-history fs-1"></i>
+                    <h3>助け合いの履歴</h3>
+                    <p>過去の助け合いの履歴を簡単に確認できます。</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <i class="bi bi-bell fs-1"></i>
+                    <h3>通知機能</h3>
+                    <p>リアルタイムでの通知で機会を逃しません。</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <i class="bi bi-person-check fs-1"></i>
+                    <h3>信頼できるコミュニティ</h3>
+                    <p>信頼性の高いメンバーが集まる安心の環境。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 利用の流れセクション -->
+    <section class="steps py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="0">
+                    <h3>1. サインアップ</h3>
+                    <p>簡単な登録で始められます。</p>
+                    <img src="./signup.png" alt="サインアップ" class="img-fluid">
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+                    <h3>2. プロフィール設定</h3>
+                    <p>自分のスキルやサポート内容を設定。</p>
+                    <img src="./profile.png" alt="プロフィール設定" class="img-fluid">
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+                    <h3>3. マッチング開始</h3>
+                    <p>リアルタイムでマッチングを開始し、助け合いを行います。</p>
+                    <img src="./matching.png" alt="マッチング開始" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ユーザーボイスセクション -->
+    <section class="reviews py-5">
+        <div class="container">
+            <h2 class="text-center">ユーザーの声</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img class="card-img-top" src="https://doodleipsum.com/700/avatar-3?i=882b267d88f542cccda8e9fd16cd33ee" alt="ユーザー1">
+                        <div class="card-body">
+                            <p class="card-text">「このサービスのおかげで、困っていたときにすぐ助けてもらえました！」</p>
+                            <h5 class="card-title">30代　女性</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img class="card-img-top" src="https://doodleipsum.com/700/avatar-3?i=5ff278e220eacb10b8e37efefef406a6" alt="ユーザー2">
+                        <div class="card-body">
+                            <p class="card-text">「助ける側としても、非常に簡単でやりがいを感じます。」</p>
+                            <h5 class="card-title">40代　男性</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問い合わせセクション -->
+    <section class="contact-section bg-light">
+        <div class="container py-3">
+            <h2 class="text-center mb-4">お問い合わせ</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">お名前</label>
+                            <input type="text" class="form-control" id="name" placeholder="お名前を入力してください">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">メールアドレス</label>
+                            <input type="email" class="form-control" id="email" placeholder="メールアドレスを入力してください">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">メッセージ</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="メッセージを入力してください"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">送信</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 FukusITo. All rights reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">利用規約</a></li>
+                <li class="list-inline-item"><a href="#">プライバシーポリシー</a></li>
+                <li class="list-inline-item"><a href="#">サポート</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+
+</body>
+
+</html>
